@@ -12,7 +12,7 @@ let app = new Vue({
   methods: {
     next() {
       this.counter++;
-      if (this.counter === this.images.length) {
+      if (this.counter > this.images.length - 1) {
         this.counter = 0;
       }
     },
@@ -25,6 +25,6 @@ let app = new Vue({
     },
   },
   created() {
-    this.interval = setInterval(() => this.next(), 3000);
+    setInterval(this.next, 3000);
   },
 });
