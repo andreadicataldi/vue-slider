@@ -26,5 +26,13 @@ let app = new Vue({
   },
   created() {
     setInterval(this.next, 3000);
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "ArrowRight") {
+        this.next();
+      }
+      if (e.key === "ArrowLeft") {
+        this.prev();
+      }
+    });
   },
 });
