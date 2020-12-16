@@ -31,6 +31,7 @@
               :class="(index === counter) ? 'active' : '' "
               class="fas fa-circle"
               v-for="(img, index) in images"
+              @click="counter = index"
             ></i>
           </div>
         </div>
